@@ -8,7 +8,9 @@ const sortInputArray = (event) => {
   ].map((dropdown) => Number(dropdown.value));
 
   // Call for algorithm
-  const sortedValues = insertionSort(inputValues);
+  const sortedValues = inputValues.sort((a ,b) => {
+    return a - b;
+  });
 
   updateUI(sortedValues);
 };
